@@ -15,10 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
       formSection.scrollIntoView({ behavior: "smooth" });
     }
   }
-
+  /* --- BOTÓN HERO: scroll + tracking --- */
   if (heroCta) heroCta.addEventListener("click", scrollToForm);
-  if (heroNavCta) heroNavCta.addEventListener("click", scrollToForm);
+  if (heroCta) heroCta.addEventListener("click", () => {
+    if (typeof ac === "function") {
+      ac("track", "click_cta_hero");
+    }
+  });
 
+  /* --- BOTÓN DEL MENÚ: scroll + tracking --- */
+  if (heroNavCta) heroNavCta.addEventListener("click", scrollToForm);
+  if (heroNavCta) heroNavCta.addEventListener("click", () => {
+    if (typeof ac === "function") {
+      ac("track", "click_cta_nav");
+    }
+  });
+
+  
   // Botones de "Cotizar este viaje" en cada paquete
   const paqueteButtons = document.querySelectorAll(".btn-cotizar-paquete");
   const destinoSelect = document.getElementById("destino");
@@ -33,6 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Lugar perfecto para enganchar Predictive Engagement (eventos personalizados)
       console.log("CTA paquete clickeado:", paquete);
+      // Evento personalizado Predictive Engagement para clic en paquete
+      if (typeof ac === "function") {
+      ac("track", "click_paquete", { paquete: paquete });
+        }
     });
   });
 
