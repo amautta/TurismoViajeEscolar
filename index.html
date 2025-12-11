@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TurismoViajeEscolar - Viajes de fin de año para estudiantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="TurismoViajeEscolar organiza viajes de fin de año para cursos de estudiantes, con paquetes all inclusive y actividades pensadas para jóvenes."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="container header__content">
+      <div class="logo">
+        <span class="logo__icon">🎒</span>
+        <span class="logo__text">TurismoViajeEscolar</span>
+      </div>
+      <nav class="nav">
+        <a href="#paquetes">Paquetes</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+        <button id="btn-cotizar-hero-nav" class="btn btn--outline">
+          Cotizar viaje escolar
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero__content">
+      <div class="hero__text">
+        <h1>Viajes de fin de año para estudiantes</h1>
+        <p>
+          Organizamos viajes de fin de año para cursos que terminaron su año escolar
+          y <strong>merecen un descanso</strong>. Diseñamos experiencias tipo
+          vacaciones para jóvenes, con actividades, alojamiento, traslados y
+          acompañamiento incluidos.
+        </p>
+        <p class="hero__highlight">
+          Todo en un solo plan, para que el curso solo se preocupe de disfrutar.
+        </p>
+        <div class="hero__actions">
+          <button id="btn-cotizar-hero" class="btn btn--primary">
+            Cotizar viaje escolar
+          </button>
+          <button class="btn btn--ghost" onclick="document.getElementById('paquetes').scrollIntoView({ behavior: 'smooth' })">
+            Ver paquetes disponibles
+          </button>
+        </div>
+        <div class="hero__tags">
+          <span>All inclusive</span>
+          <span>Acompañamiento 24/7</span>
+          <span>Actividades para jóvenes</span>
+        </div>
+      </div>
+      <div class="hero__image">
+        <!-- Imagen demo, puedes cambiarla si quieres -->
+        <div class="hero__image-inner">
+          <img
+            src="https://via.placeholder.com/600x380?text=Viaje+de+fin+de+a%C3%B1o"
+            alt="Jóvenes de viaje de fin de año"
+          />
+          <div class="hero__badge">
+            <span>Viajes para cursos</span>
+            <strong>Experiencias inolvidables</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAQUETES -->
+  <section id="paquetes" class="section section--light">
+    <div class="container">
+      <header class="section__header">
+        <h2>Paquetes all inclusive para tu curso</h2>
+        <p>
+          Elige uno de nuestros paquetes tipo demo, pensados para jóvenes que buscan
+          celebrar el cierre del año escolar con actividades, playa, aventura y
+          mucha diversión supervisada.
+        </p>
+      </header>
+
+      <div class="cards-grid">
+        <!-- Paquete 1 -->
+        <article class="card">
+          <div class="card__tag">Brasil</div>
+          <h3>Camboriú 7 días / 6 noches</h3>
+          <p class="card__subtitle">
+            Playas, panoramas nocturnos supervisados y actividades grupales para
+            celebrar el fin de año escolar.
+          </p>
+          <ul class="card__list">
+            <li>City tour por Camboriú</li>
+            <li>Visita a la playa y actividades recreativas</li>
+            <li>Subida a rueda gigante estilo “Big Wheel”</li>
+            <li>Actividades nocturnas supervisadas</li>
+          </ul>
+          <p class="card__label">Plan all inclusive: alojamiento, transporte y actividades.</p>
+          <button
+            class="btn btn--primary btn-cotizar-paquete"
+            data-paquete="Camboriú 7D/6N"
+          >
+            Cotizar este viaje
+          </button>
+        </article>
+
+        <!-- Paquete 2 -->
+        <article class="card">
+          <div class="card__tag">Argentina</div>
+          <h3>Bariloche 5 días / 4 noches</h3>
+          <p class="card__subtitle">
+            Un clásico viaje de fin de año con paisajes, lago y panoramas pensados
+            para cursos de estudiantes.
+          </p>
+          <ul class="card__list">
+            <li>City tour y miradores panorámicos</li>
+            <li>Visita a lago y actividades al aire libre</li>
+            <li>Jornadas recreativas para el curso</li>
+            <li>Noches temáticas supervisadas</li>
+          </ul>
+          <p class="card__label">Plan all inclusive: alojamiento, transporte y actividades.</p>
+          <button
+            class="btn btn--primary btn-cotizar-paquete"
+            data-paquete="Bariloche 5D/4N"
+          >
+            Cotizar este viaje
+          </button>
+        </article>
+
+        <!-- Paquete 3 -->
+        <article class="card">
+          <div class="card__tag">Chile</div>
+          <h3>Pucón 6 días / 5 noches</h3>
+          <p class="card__subtitle">
+            Naturaleza, termas y actividades de aventura suave para cursos que
+            quieren desconectarse y compartir.
+          </p>
+          <ul class="card__list">
+            <li>Visita a lago y playas</li>
+            <li>Termas y relajo grupal</li>
+            <li>Trekking suave y actividades outdoors</li>
+            <li>Panoramas nocturnos supervisados</li>
+          </ul>
+          <p class="card__label">Plan all inclusive: alojamiento, transporte y actividades.</p>
+          <button
+            class="btn btn--primary btn-cotizar-paquete"
+            data-paquete="Pucón 6D/5N"
+          >
+            Cotizar este viaje
+          </button>
+        </article>
+
+        <!-- Paquete 4 -->
+        <article class="card">
+          <div class="card__tag">Chile</div>
+          <h3>Desierto de Pedro de Valdivia 4 días / 3 noches</h3>
+          <p class="card__subtitle">
+            Una experiencia distinta en el norte, con tours, dunas y actividades
+            grupales para cerrar el año con algo único.
+          </p>
+          <ul class="card__list">
+            <li>Tours por la zona desértica</li>
+            <li>Visita a dunas y actividades recreativas</li>
+            <li>Juegos y dinámicas para el curso</li>
+            <li>Panoramas nocturnos supervisados</li>
+          </ul>
+          <p class="card__label">Plan all inclusive: alojamiento, transporte y actividades.</p>
+          <button
+            class="btn btn--primary btn-cotizar-paquete"
+            data-paquete="Desierto Pedro de Valdivia 4D/3N"
+          >
+            Cotizar este viaje
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section section--accent">
+    <div class="container">
+      <header class="section__header section__header--center">
+        <h2>Lo que dicen los cursos que viajaron</h2>
+        <p>Testimonios demo de colegios que realizaron su viaje de fin de año.</p>
+      </header>
+
+      <div class="testimonials">
+        <article class="testimonial">
+          <p class="testimonial__text">
+            “Nuestro viaje de fin de año fue increíble. El curso completo pudo
+            disfrutar sin preocupaciones, todo estaba coordinado y supervisado.”
+          </p>
+          <p class="testimonial__author">Curso 4º Medio - Colegio Demo Sur</p>
+        </article>
+
+        <article class="testimonial">
+          <p class="testimonial__text">
+            “Las actividades para los chicos estuvieron muy bien pensadas. Para
+            nosotros como profesores fue muy tranquilo y seguro.”
+          </p>
+          <p class="testimonial__author">Profesor jefe - Colegio Demo Norte</p>
+        </article>
+
+        <article class="testimonial">
+          <p class="testimonial__text">
+            “Excelente cierre de año escolar. El curso volvió feliz, con muchas
+            anécdotas y recuerdos.”
+          </p>
+          <p class="testimonial__author">Centro de Padres - Colegio Demo Centro</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container section__split">
+      <div class="section__info">
+        <h2>Cotiza tu viaje escolar</h2>
+        <p>
+          Completa este formulario demo para simular una solicitud de cotización
+          para tu curso. Puedes usarlo en tu laboratorio de
+          <strong>Predictive Engagement</strong> para probar journeys y eventos.
+        </p>
+        <ul class="contact__highlights">
+          <li>Viajes pensados para cursos de estudiantes.</li>
+          <li>Paquetes all inclusive, con actividades y acompañamiento.</li>
+          <li>Texto y datos 100% demo, sin transacciones reales.</li>
+        </ul>
+      </div>
+
+      <div class="section__form">
+        <form id="form-cotizacion" class="form">
+          <div class="form__group">
+            <label for="nombre">Nombre del contacto</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form__group">
+            <label for="colegio">Colegio</label>
+            <input type="text" id="colegio" name="colegio" required />
+          </div>
+
+          <div class="form__group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+
+          <div class="form__group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+
+          <div class="form__group">
+            <label for="destino">Destino preferido</label>
+            <select id="destino" name="destino">
+              <option value="">Selecciona un destino</option>
+              <option value="Camboriú 7D/6N">Camboriú 7 días / 6 noches</option>
+              <option value="Bariloche 5D/4N">Bariloche 5 días / 4 noches</option>
+              <option value="Pucón 6D/5N">Pucón 6 días / 5 noches</option>
+              <option value="Desierto Pedro de Valdivia 4D/3N">
+                Desierto de Pedro de Valdivia 4 días / 3 noches
+              </option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="tamano">Tamaño del curso (cantidad de estudiantes)</label>
+            <input type="number" id="tamano" name="tamano" min="1" />
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar cotización
+          </button>
+
+          <p class="form__note">
+            Este formulario es solo para fines de demostración y pruebas.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <div class="footer__brand">
+        <div class="logo">
+          <span class="logo__icon">🎒</span>
+          <span class="logo__text">TurismoViajeEscolar</span>
+        </div>
+        <p>Sitio de demostración para viajes de fin de año de estudiantes.</p>
+      </div>
+      <div class="footer__info">
+        <p><strong>Contacto demo</strong></p>
+        <p>correo@turismoviajeescolar.demo</p>
+        <p>+56 9 0000 0000 · Santiago, Chile</p>
+      </div>
+      <div class="footer__social">
+        <p>Síguenos (links demo):</p>
+        <div class="footer__social-icons">
+          <span>📘</span>
+          <span>📸</span>
+          <span>🎵</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> TurismoViajeEscolar · Sitio demo</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
