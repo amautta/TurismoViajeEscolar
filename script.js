@@ -17,23 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* --- BOTÓN HERO: scroll + tracking --- */
+  /* --- BOTÓN HERO: scroll + evento personalizado --- */
   if (heroCta) heroCta.addEventListener("click", scrollToForm);
 
   if (heroCta) heroCta.addEventListener("click", () => {
-    // Evento personalizado Predictive Engagement
     if (typeof ac === "function") {
-      ac("track", "click_cta_hero");
+      // Evento personalizado: clic en CTA principal
+      ac("record", "click_cta_hero");
     }
   });
 
-  /* --- BOTÓN DEL MENÚ: scroll + tracking --- */
+  /* --- BOTÓN DEL MENÚ: scroll + evento personalizado --- */
   if (heroNavCta) heroNavCta.addEventListener("click", scrollToForm);
 
   if (heroNavCta) heroNavCta.addEventListener("click", () => {
-    // Evento personalizado Predictive Engagement
     if (typeof ac === "function") {
-      ac("track", "click_cta_nav");
+      // Evento personalizado: clic en CTA del menú
+      ac("record", "click_cta_nav");
     }
   });
 
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("CTA paquete clickeado:", paquete);
 
-      // Evento personalizado Predictive Engagement para clic en paquete
+      // Evento personalizado: clic en paquete
       if (typeof ac === "function") {
-        ac("track", "click_paquete", { paquete: paquete });
+        ac("record", "click_paquete", { paquete: paquete });
       }
     });
   });
@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      // Evento personalizado Predictive Engagement para envío de formulario
+      // Evento personalizado: envío de formulario
       if (typeof ac === "function") {
         const destinoValue = destinoSelect ? destinoSelect.value : null;
-        ac("track", "form_submit", {
+        ac("record", "form_submit", {
           destino: destinoValue,
         });
       }
