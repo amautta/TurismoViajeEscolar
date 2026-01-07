@@ -1,42 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>Knowledge Portal | TurismoViajeEscolar</title>
-
-  <!-- (Opcional) tu CSS existente si quieres que se vea consistente -->
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <main style="max-width: 1100px; margin: 24px auto; padding: 0 16px;">
-    <header style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
-      <h1 style="margin:0;">Knowledge Portal</h1>
-      <a href="index.html" style="text-decoration:none;">← Volver al sitio</a>
-    </header>
+  <header class="header">
+    <div class="container header__content">
+      <div class="logo">
+        <span class="logo__icon">🎒</span>
+        <span class="logo__text">TurismoViajeEscolar</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Volver</a>
+      </nav>
+    </div>
+  </header>
 
-    <p style="margin-top:8px; opacity:0.8;">
-      Portal de ayuda y artículos (demo).
-    </p>
+  <section class="section">
+    <div class="container">
+      <h1>Knowledge Portal</h1>
+      <p>Centro de ayuda y artículos (demo).</p>
 
-    <!-- GENESYS Knowledge Portal -->
-    <div id="genesys-support-center"></div>
-  </main>
+      <!-- GENESYS Knowledge Portal -->
+      <div id="genesys-support-center"></div>
+    </div>
+  </section>
 
- <script type="text/javascript" charset="utf-8">
-  (function (g, e, n, es, ys) {
-    g['_genesysJs'] = e;
-    g[e] = g[e] || function () {
-      (g[e].q = g[e].q || []).push(arguments)
-    };
-    g[e].t = 1 * new Date();
-    g[e].c = es;
-    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-  })(window, 'Genesys', 'https://apps.usw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
-    environment: 'prod-usw2',
-    deploymentId: '1a496218-8aaf-4657-9adb-57a1e17bd15b'
-  });
-</script>
+  <!-- Genesys Predictive Engagement Website Snippet (opcional, pero recomendado mantener) -->
+  <script>
+    (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+    (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+    d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+    })(window, document, 'script', 'https://apps.usw2.pure.cloud/journey/sdk/js/web/v1/ac.js', 'ac');
+    ac('init', '8a819025-64da-4ce2-82ba-0c9655165e74', { region: 'usw2' });
+    ac('pageview');
+  </script>
 
+  <!-- Web Messenger (deja esto igual, porque parece ser el que está habilitando/support center en tu entorno) -->
+  <script type="text/javascript" charset="utf-8">
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', 'https://apps.usw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
+      environment: 'prod-usw2',
+      deploymentId: '1a496218-8aaf-4657-9adb-57a1e17bd15b'
+    });
+  </script>
 </body>
 </html>
